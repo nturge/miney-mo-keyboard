@@ -5,26 +5,39 @@
   <meta charset="utf-8">
     <meta name="author" content="Nick Turgeon">
   <title>Dadaist Poem Generator</title>
+  
   <style>
     
-    .key{
-      display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-gap: 10px;
+    div{
+      background-color: pink;
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+      text-align: center;
+      
+      
+    }
+    
+    .RowOne{
+      display: flex;
+      
+      
     }
 
-    div{
-    background-color: pink;
-    border: 1px solid black;
-    text-align: center;
-    
-  
+    .RowTwo{
+      display: flex;
     }
+    
+    .RowThree{
+      display: flex;
+    }
+    
   </style>
   
 </head>
   <body>
 <section class="key">
+  <section class="RowOne">
   <div class="Q">q</div>
   <div class="W">w</div>
   <div class="E">e</div>
@@ -35,6 +48,9 @@
   <div class="I">i</div>
   <div class="O">o</div>
   <div class="P">p</div>
+  </section>
+  
+<section class="RowTwo">
   <div class="A">a</div>
   <div class="S">s</div>
   <div class="D">d</div>
@@ -44,6 +60,9 @@
   <div class="J">j</div>
   <div class="K">k</div>
   <div class="L">l</div>
+  </section>
+  
+<section class="RowThree">
   <div class="Z">z</div>
   <div class="X">x</div>
   <div class="C">c</div>
@@ -51,9 +70,8 @@
   <div class="B">b</div>
   <div class="N">n</div>
   <div class="M">m</div>
- 
-
- 
+  </section>
+  
 </section>
     
 
