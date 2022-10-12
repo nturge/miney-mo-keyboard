@@ -8,20 +8,19 @@
   
   <style>
     
-    .key{
-      position: relative;
-      top: 50vh;
-    }
+  
     
-    div{
+    .keyClass{
       border-radius: 15px;
-background: linear-gradient(145deg, #c1c1c1, #e5e5e5);
+background-color: green;
 box-shadow: 17px 17px 33px #b6b6b6,
              -17px -17px 33px #f6f6f6;
       width: 80px;
       height: 80px;
       margin: 5px;
-      text-align: center;  
+      text-align: center; 
+      position: relative;
+      top: 50vh;
     }
     
     .RowOne{
@@ -46,43 +45,65 @@ box-shadow: 17px 17px 33px #b6b6b6,
   <body>
 <section class="key">
   <section class="RowOne">
-  <div class="Q">q</div>
-  <div class="W">w</div>
-  <div class="E">e</div>
-  <div class="R">r</div>
-  <div class="T">t</div>
-  <div class="Y">y</div>
-  <div class="U">u</div>
-  <div class="I">i</div>
-  <div class="O">o</div>
-  <div class="P">p</div>
+  <div class="keyClass Q">q</div>
+  <div class="keyClass W">w</div>
+  <div class="keyClass E">e</div>
+  <div class="keyClass R">r</div>
+  <div class="keyClass T">t</div>
+  <div class="keyClass Y">y</div>
+  <div class="keyClass U">u</div>
+  <div class="keyClass I">i</div>
+  <div class="keyClass O">o</div>
+  <div class="keyClass P">p</div>
   </section>
   
 <section class="RowTwo">
-  <div class="A">a</div>
-  <div class="S">s</div>
-  <div class="D">d</div>
-  <div class="F">f</div>
-  <div class="G">g</div>
-  <div class="H">h</div>
-  <div class="J">j</div>
-  <div class="K">k</div>
-  <div class="L">l</div>
+  <div class="keyClass A">a</div>
+  <div class="keyClass S">s</div>
+  <div class="keyClass D">d</div>
+  <div class="keyClass F">f</div>
+  <div class="keyClass G">g</div>
+  <div class="keyClass H">h</div>
+  <div class="keyClass J">j</div>
+  <div class="keyClass K">k</div>
+  <div class="keyClass L">l</div>
   </section>
   
 <section class="RowThree">
-  <div class="Z">z</div>
-  <div class="X">x</div>
-  <div class="C">c</div>
-  <div class="V">v</div>
-  <div class="B">b</div>
-  <div class="N">n</div>
-  <div class="M">m</div>
+  <div class="keyClass Z">z</div>
+  <div class="keyClass X">x</div>
+  <div class="keyClass C">c</div>
+  <div class="keyClass V">v</div>
+  <div class="keyClass B">b</div>
+  <div class="keyClass N">n</div>
+  <div class="keyClass M">m</div>
   </section>
   
 </section>
     
 
   </body>
+  
+<script>
+  
+   const key = document.querySelector(".keyClass")
+ 
+   function randomColor() {
+    const r = Math.floor(Math.random() * 255)
+    const g = Math.floor(Math.random() * 255)
+    const b = Math.floor(Math.random() * 255)
+    return `rgb(${r}, ${g}, ${b})`
+  }
+  
+  function updateKey() {
+    key.style.backgroundColor = randomColor()
+    document.body.style.backgroundColor = randomColor()
+  }
+  
+ 
+
+  key.addEventListener('click', updateKey)
+  
+  </script>
   
 </html>
