@@ -8,15 +8,37 @@
   
   <style>
     
-    .RowOne {
-      display: flex;
-      flex-direction: row;
+    .keyboard{
+   
+      
     }
     
+    .keyClass{
+       border-radius: 15px;
+        background-color: gray;
+        box-shadow: 17px 17px 33px #b6b6b6,
+          -17px -17px 33px #f6f6f6;
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+        text-align: center;
+        position: relative;
+       
+    }
     
+    .rowOne{
+      display:flex;
+      justify-content: center;
+      
+    }
 
-     
+    .rowTwo{
+      
+    }
 
+    .rowThree{
+      
+    }
  
     
   </style>
@@ -24,66 +46,55 @@
 </head>
  
 <body>
-  
-  <div class="RowOne" id="Q">q</div>
-  <div class="RowOne" id="W">w</div>
-  <div class="RowOne" id="E">e</div>
-  <div class="RowOne" id="R">r</div>
-  <div class="RowOne" id="T">t</div>
-  <div class="RowOne" id="Y">y</div>
-  <div class="RowOne" id="U">u</div>
-  <div class="RowOne" id="I">i</div>
-  <div class="RowOne" id="O">o</div>
-  <div class="RowOne" id="P">p</div>
-      
-  <div class="RowTwo" id="A">a</div>
-  <div class="RowTwo" id="S">s</div>
-  <div class="RowTwo" id="D">d</div>
-  <div class="RowTwo" id="F">f</div>
-  <div class="RowTwo" id="G">g</div>
-  <div class="RowTwo" id="H">h</div>
-  <div class="RowTwo" id="J">j</div>
-  <div class="RowTwo" id="K">k</div>
-  <div class="RowTwo" id="L">l</div>
+
+
+<div class="keyboard">
+  <div class="rowOne">
+     <div class="keyClass" id="Q">q</div>
+  <div class="keyClass" id="W">w</div>
+  <div class="keyClass" id="E">e</div>
+  <div class="keyClass" id="R">r</div>
+  <div class="keyClass" id="T">t</div>
+  <div class="keyClass" id="Y">y</div>
+  <div class="keyClass" id="U">u</div>
+  <div class="keyClass" id="I">i</div>
+  <div class="keyClass" id="O">o</div>
+  <div class="keyClass" id="P">p</div>
+  </div>
  
-  <div class="RowThree" id="Z">z</div>
-  <div class="RowThree" id="X">x</div>
-  <div class="RowThree" id="C">c</div>
-  <div class="RowThree" id="V">v</div>
-  <div class="RowThree" id="B">b</div>
-  <div class="RowThree" id="N">n</div>
-  <div class="RowThree" id="M">m</div>
+<div class="rowTwo">
+  <div class="rowTwo keyClass" id="A">a</div>
+  <div class="rowTwo keyClass" id="S">s</div>
+  <div class="rowTwo keyClass" id="D">d</div>
+  <div class="rowTwo keyClass" id="F">f</div>
+  <div class="rowTwo keyClass" id="G">g</div>
+  <div class="rowTwo keyClass" id="H">h</div>
+  <div class="keyClass" id="J">j</div>
+  <div class="keyClass" id="K">k</div>
+  <div class="keyClass" id="L">l</div>
+  </div>
+  
+ 
+  <div class="rowThree keyClass" id="Z">z</div>
+  <div class="rowThree keyClass" id="X">x</div>
+  <div class="rowThree keyClass" id="C">c</div>
+  <div class="rowThree keyClass" id="V">v</div>
+  <div class="rowThree keyClass" id="B">b</div>
+  <div class="rowThree keyClass" id="N">n</div>
+  <div class="rowThree keyClass" id="M">m</div>
+ 
+  </div>
+  
+ 
   
   
 
-
-
-</body>
-  
   <script>
  
-let key = document.querySelector('div')
-  
-   function randomColor() {
-    const r = Math.floor(Math.random() * 255)
-    const g = Math.floor(Math.random() * 255)
-    const b = Math.floor(Math.random() * 255)
-    return `rgb(${r}, ${g}, ${b})`
-  }
-  
-  function updateKey() {
-    key.style.backgroundColor = randomColor()
-    document.body.style.backgroundColor = randomColor()
-  }
-  
 
-  
-
-  key.addEventListener('click', updateKey)
   
 </script>
- 
-  
 
+</body>
   
 </html>
