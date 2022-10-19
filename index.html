@@ -9,7 +9,8 @@
   <style>
     
     .keyboard{
-   
+      position: relative;
+      top: 50vh;
       
     }
     
@@ -27,17 +28,19 @@
     }
     
     .rowOne{
-      display:flex;
+      display: flex;
       justify-content: center;
       
     }
 
     .rowTwo{
-      
+      display: flex;
+      justify-content: center;
     }
 
     .rowThree{
-      
+      display: flex;
+      justify-content: center;
     }
  
     
@@ -49,8 +52,8 @@
 
 
 <div class="keyboard">
-  <div class="rowOne">
-     <div class="keyClass" id="Q">q</div>
+<div class="rowOne">
+  <div class="keyClass" id="Q">q</div>
   <div class="keyClass" id="W">w</div>
   <div class="keyClass" id="E">e</div>
   <div class="keyClass" id="R">r</div>
@@ -63,25 +66,27 @@
   </div>
  
 <div class="rowTwo">
-  <div class="rowTwo keyClass" id="A">a</div>
-  <div class="rowTwo keyClass" id="S">s</div>
-  <div class="rowTwo keyClass" id="D">d</div>
-  <div class="rowTwo keyClass" id="F">f</div>
-  <div class="rowTwo keyClass" id="G">g</div>
-  <div class="rowTwo keyClass" id="H">h</div>
+  <div class="keyClass" id="A">a</div>
+  <div class="keyClass" id="S">s</div>
+  <div class="keyClass" id="D">d</div>
+  <div class="keyClass" id="F">f</div>
+  <div class="keyClass" id="G">g</div>
+  <div class="keyClass" id="H">h</div>
   <div class="keyClass" id="J">j</div>
   <div class="keyClass" id="K">k</div>
   <div class="keyClass" id="L">l</div>
   </div>
   
- 
-  <div class="rowThree keyClass" id="Z">z</div>
-  <div class="rowThree keyClass" id="X">x</div>
-  <div class="rowThree keyClass" id="C">c</div>
-  <div class="rowThree keyClass" id="V">v</div>
-  <div class="rowThree keyClass" id="B">b</div>
-  <div class="rowThree keyClass" id="N">n</div>
-  <div class="rowThree keyClass" id="M">m</div>
+<div class="rowThree">
+  <div class="keyClass" id="Z">z</div>
+  <div class="keyClass" id="X">x</div>
+  <div class="keyClass" id="C">c</div>
+  <div class="keyClass" id="V">v</div>
+  <div class="keyClass" id="B">b</div>
+  <div class="keyClass" id="N">n</div>
+  <div class="keyClass" id="M">m</div>
+  </div>
+
  
   </div>
   
@@ -90,7 +95,18 @@
   
 
   <script>
- 
+    
+ function randomColor(e) {
+            const r = Math.floor(Math.random() * 255)
+            const g = Math.floor(Math.random() * 255)
+            const b = Math.floor(Math.random() * 255)
+            e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+          }
+          
+          const keys = document.querySelectorAll(".keyClass")
+          keys.forEach(key => {
+						key.addEventListener('click', randomColor)
+					})
 
   
 </script>
