@@ -108,7 +108,7 @@
 						key.addEventListener('click', randomColor)
 					});
     
-    let keysPressed = document.getElementById("Q");
+    let keysPressed = document.querySelectorAll(".keyClass");
     keysPressed.addEventListener('keydown', (event) => {
       console.log(`key=${event.key}`);
     });
