@@ -23,8 +23,11 @@
         width: 80px;
         height: 80px;
         margin: 5px;
-        text-align: center;
-        position: relative;
+      	display: flex;
+      	align-items: center;
+      	justify-content: center;
+      	font-family: arial;
+        
       	
        
     }
@@ -147,24 +150,25 @@ const dummyArray = [
 				"109": { id: "#M" }
 			}
   
-
- 
+async function getPoem () {
+  const res = await fetch('https://www.beanpoems.com/api/random')
+	const json = await res.json()
+  console.log(json)
+  }
+    getPoem() 
+     
   function swapForArray(e) {
   
      let ranNum= Math.floor(Math.random() * dummyArray.length)
-    console.log('the random number is',[ranNum])
-    
      let ranItem = dummyArray[ranNum]
-    console.log('the random text from the array is', [ranItem])
-    
-    
+     
   const c = e.keyCode
         const obj = keyMap[c]
         const ele = document.querySelector(obj.id)
         ele.innerHTML = ranItem
       }
     
-    
+     
     window.addEventListener('keypress', swapForArray)
 
   
