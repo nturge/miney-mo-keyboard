@@ -27,10 +27,22 @@
       	align-items: center;
       	justify-content: center;
       	font-family: arial;
+      	
         
       	
        
     }
+    
+    .textBox{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: arial;
+      font-size: 40;
+      position: relative;
+      top: 30%;
+    }
+    
     
     .rowOne{
       display: flex;
@@ -55,6 +67,9 @@
  
 <body>
 
+<div class="textBox">
+  here's where the text might go
+  </div>
 
 <div class="keyboard">
 <div class="rowOne">
@@ -101,7 +116,7 @@
 
   <script>
     
-const dummyArray = [
+const arrayA = [
   'eenie',
   'meanie',
   'miney',
@@ -117,9 +132,10 @@ const dummyArray = [
 	'hollers',
   'let',
   'him',
-  'go',
-  
+  'go',  
 ]
+
+const arrayB = []
 
     const keyMap = {
 				"113": { id: "#Q" },
@@ -150,22 +166,39 @@ const dummyArray = [
 				"109": { id: "#M" }
 			}
   
-async function getPoem () {
-  const res = await fetch('https://www.beanpoems.com/api/random')
-	const json = await res.json()
-  console.log(json)
-  }
-    getPoem() 
+
+
+
+    
+    async function getNews(){
+    const url = 'https://api.currentsapi.services/v1/latest-news?' +
+ 'language=us&' +
+ 'apiKey=pDVJCwue7GdPfzIjR6eq8kVHg3Ur4qpPbHhCijZP15dofRMw';
+    const req = new Request(url)
+    const res = await fetch(req)
+    const json = res.json
+    console.log(json)
+}
+   
+    getNews()
+
      
   function swapForArray(e) {
   
-     let ranNum= Math.floor(Math.random() * dummyArray.length)
-     let ranItem = dummyArray[ranNum]
+     let ranNum= Math.floor(Math.random() * arrayA.length)
+     let ranItem = arrayA[ranNum]
      
   const c = e.keyCode
         const obj = keyMap[c]
         const ele = document.querySelector(obj.id)
         ele.innerHTML = ranItem
+  
+    const display = document.querySelector('.textBox')
+    display.innerHTML = [arrayB] 
+    
+  arrayB.push(ranItem)
+    
+    console.log(arrayB)
       }
     
      
