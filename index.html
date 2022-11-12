@@ -202,9 +202,10 @@ let ranItem = arrayA[ranNum]
   const obj = keyMap[c]
   const ele = document.querySelector(obj.id)
   const content = ele.innerHTML
-  
-  console.log(content)
-
+    
+    arrayB.push(content)
+	const textBox = document.querySelector('.textBox')
+  textBox.innerHTML = arrayB.join(' ')
       }
     
      
