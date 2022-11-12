@@ -182,11 +182,23 @@ const arrayB = []
    
     getNews()
 
-     
+  function fillKeys(){
+    for (let i = 97; i < 123; i++){
+      const obj = keyMap[i]
+      const ele = document.querySelector(obj.id)
+let ranNum= Math.floor(Math.random() * arrayA.length)
+let ranItem = arrayA[ranNum]
+      ele.innerHTML = ranItem 
+    }  
+  }   
+
+    fillKeys()
+   
+    
+    
   function swapForArray(e) {
   
-     let ranNum= Math.floor(Math.random() * arrayA.length)
-     let ranItem = arrayA[ranNum]
+
      
   const c = e.keyCode
         const obj = keyMap[c]
