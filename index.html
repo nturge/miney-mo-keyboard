@@ -197,20 +197,14 @@ let ranItem = arrayA[ranNum]
     
     
   function swapForArray(e) {
-  
-
-     
+    
   const c = e.keyCode
-        const obj = keyMap[c]
-        const ele = document.querySelector(obj.id)
-        ele.innerHTML = ranItem
+  const obj = keyMap[c]
+  const ele = document.querySelector(obj.id)
+  const content = ele.innerHTML
   
-    const display = document.querySelector('.textBox')
-    display.innerHTML = [arrayB] 
-    
-  arrayB.push(ranItem)
-    
-    console.log(arrayB)
+  console.log(content)
+
       }
     
      
