@@ -205,7 +205,11 @@ let ranItem = arrayA[ranNum]
     
     arrayB.push(content)
 	const textBox = document.querySelector('.textBox')
-  textBox.innerHTML = arrayB.join(' ')
+  textBox.innerHTML = arrayB.join(' ') 
+    
+  let ranNum = Math.floor(Math.random() * arrayA.length)
+  let ranItem = arrayA[ranNum]
+  ele.innerHTML = ranItem
       }
     
      
