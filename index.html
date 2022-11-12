@@ -67,8 +67,7 @@
  
 <body>
 
-<div class="textBox">
-  here's where the text might go
+<div class="textBox"> 
   </div>
 
 <div class="keyboard">
@@ -165,10 +164,6 @@ const arrayB = []
 				"110": { id: "#N" },
 				"109": { id: "#M" }
 			}
-  
-
-
-
     
     async function getNews(){
     const url = 'https://api.currentsapi.services/v1/latest-news?' +
@@ -210,6 +205,7 @@ let ranItem = arrayA[ranNum]
   let ranNum = Math.floor(Math.random() * arrayA.length)
   let ranItem = arrayA[ranNum]
   ele.innerHTML = ranItem
+    console.log(e)
       }
     
      
