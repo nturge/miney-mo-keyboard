@@ -207,10 +207,17 @@ let ranItem = arrayA[ranNum]
   ele.innerHTML = ranItem
     console.log(e)
       }
-    
-     
+   
     window.addEventListener('keypress', swapForArray)
+    
+  function keyListener(e){
+    if(e.key === 'Backspace') {
+      
+    }
+    console.log(e)
+  }
 
+    window.addEventListener('keydown', keyListener)
   
     
     
